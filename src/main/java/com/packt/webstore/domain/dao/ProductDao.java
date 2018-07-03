@@ -1,11 +1,15 @@
-package com.packt.webstore.domain.repository;
+package com.packt.webstore.domain.dao;
+
+import com.packt.webstore.domain.entity.Customer;
+import com.packt.webstore.domain.entity.Product;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import com.packt.webstore.domain.Product;
 
-public interface ProductRepository {
+public interface ProductDao{
 	
 	List<Product> getAllProducts();
 	

@@ -1,20 +1,21 @@
 package com.packt.webstore.service.impl;
 
-import java.util.List;
+import com.packt.webstore.domain.dao.CustomerDao;
+import com.packt.webstore.domain.entity.Customer;
+import com.packt.webstore.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.packt.webstore.domain.Customer;
-import com.packt.webstore.domain.repository.CustomerRepository;
-import com.packt.webstore.service.CustomerService;
+
+import java.util.List;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
-	
-	@Autowired
-	private CustomerRepository customerRepository;
-	
-	public List<Customer> getAllCustomers() {
-		return customerRepository.getAllCustomers();
-	}
-	
+
+    @Autowired
+    private CustomerDao customerDao;
+
+    public List<Customer> getAllCustomers() {
+        return customerDao.getAllCustomers();
+    }
+
 }

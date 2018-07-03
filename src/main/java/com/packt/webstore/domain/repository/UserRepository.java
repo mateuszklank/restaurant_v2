@@ -2,11 +2,15 @@ package com.packt.webstore.domain.repository;
 
 import javax.transaction.Transactional;
 import org.springframework.data.repository.CrudRepository;
-import com.packt.webstore.domain.User;
+import com.packt.webstore.domain.entity.User;
+import org.springframework.stereotype.Repository;
 
 @Transactional
-public interface UserDao extends CrudRepository<User, Long> {
+@Repository
+public interface UserRepository extends CrudRepository<User, Long> {
 	
 	public User findByLastname(String lastname);
+
+
 
 }

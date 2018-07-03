@@ -1,17 +1,18 @@
-package com.packt.webstore.domain.repository.impl;
+package com.packt.webstore.domain.dao.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.stereotype.Repository;
-import com.packt.webstore.domain.Customer;
-import com.packt.webstore.domain.repository.CustomerRepository;
 
-@Repository
-public class InMemoryCustomerRepository implements CustomerRepository {
+import com.packt.webstore.domain.dao.CustomerDao;
+import com.packt.webstore.domain.entity.Customer;
+import org.springframework.stereotype.Service;
+
+@Service
+public class InMemoryCustomerRepositoryImpl implements CustomerDao {
 
 	private List<Customer> listOfCustomers = new ArrayList<Customer>();
 	
-	public InMemoryCustomerRepository() {
+	public InMemoryCustomerRepositoryImpl() {
 		
 		Customer uzytkownik1 = new Customer("1", "Mateusz Klank", "Urzędnicza 7a/70");
 		uzytkownik1.setNoOfOrdersMade(20);

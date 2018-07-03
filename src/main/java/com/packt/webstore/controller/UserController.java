@@ -4,12 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.packt.webstore.domain.User;
-import com.packt.webstore.domain.repository.UserDao;
+import com.packt.webstore.domain.entity.User;
+import com.packt.webstore.domain.repository.UserRepository;
+
+import java.util.Optional;
 
 @Controller
 public class UserController {
-	
+
+	@Autowired
+	private UserRepository userDao;
+
 	@RequestMapping("/create")
 	@ResponseBody
 	public String create(String firstname, String lastname) {
@@ -42,7 +47,8 @@ public class UserController {
 	@ResponseBody
 	public String updateUser(long id_employee, String firstname, String lastname) {
 		try {
-			User user = userDao.findOne(id_employee);
+			Optional<User> userOptional = userDao.findById(id_employee);
+			User user = userOptional.get();
 			user.setFirstname(firstname);
 			user.setLastname(lastname);
 			userDao.save(user);
@@ -53,7 +59,6 @@ public class UserController {
 		return "Dane użytkownika zostały pomyślnie zaktualizowane!";
 	}
 	
-	@Autowired
-	private UserDao userDao;
+
 
 }

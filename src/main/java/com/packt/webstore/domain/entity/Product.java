@@ -1,16 +1,23 @@
-package com.packt.webstore.domain;
+package com.packt.webstore.domain.entity;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 
+@Entity
+@Table(name = "products")
 public class Product {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+
+	private Long id_employee;
 	private String productId;
 	private String name;
 	private BigDecimal unitPrice;
 	private String description;
 	//private String manufacturer;
 	private String category;
-	private long unitsInStock;
-	private long unitsInOrder;
+//	private long unitsInStock;
+//	private long unitsInOrder;
 	//private boolean discontinued;
 	private boolean vege;
 	//private String condition;
@@ -73,21 +80,21 @@ public class Product {
 		this.category = category;
 	}
 
-	public long getUnitsInStock() {
-		return unitsInStock;
-	}
-
-	public void setUnitsInStock(long unitsInStock) {
-		this.unitsInStock = unitsInStock;
-	}
-
-	public long getUnitsInOrder() {
-		return unitsInOrder;
-	}
-
-	public void setUnitsInOrder(long unitsInOrder) {
-		this.unitsInOrder = unitsInOrder;
-	}
+//	public long getUnitsInStock() {
+//		return unitsInStock;
+//	}
+//
+//	public void setUnitsInStock(long unitsInStock) {
+//		this.unitsInStock = unitsInStock;
+//	}
+//
+//	public long getUnitsInOrder() {
+//		return unitsInOrder;
+//	}
+//
+//	public void setUnitsInOrder(long unitsInOrder) {
+//		this.unitsInOrder = unitsInOrder;
+//	}
 
 	public boolean isVege() {
 		return vege;

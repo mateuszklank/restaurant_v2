@@ -1,4 +1,4 @@
-package com.packt.webstore.domain;
+package com.packt.webstore.domain.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
