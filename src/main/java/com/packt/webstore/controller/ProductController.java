@@ -1,5 +1,6 @@
 package com.packt.webstore.controller;
 
+import com.sun.org.apache.xpath.internal.operations.Mult;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -7,10 +8,16 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.io.File;
 import java.util.List;
 import java.util.Map;
 import com.packt.webstore.domain.entity.Product;
 import com.packt.webstore.service.ProductService;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletRequest;
+
 //import java.math.BigDecimal;
 //import com.packt.webstore.domain.entity.Product;
 //import com.packt.webstore.domain.repository.ProductRepository;
@@ -62,10 +69,19 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String processAddNewProductForm(@ModelAttribute("newProduct") Product newProduct, BindingResult result) {
+	public String processAddNewProductForm(@ModelAttribute("newProduct") Product newProduct, BindingResult result, HttpServletRequest request) {
 		String[] suppressedFields = result.getSuppressedFields();
 		if (suppressedFields.length > 0) {
 			throw new RuntimeException("Próba wiązania niedozwolonych pól: " + StringUtils.arrayToCommaDelimitedString(suppressedFields));
+		}
+		MultipartFile productImage = newProduct.getProductImage();
+		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+		if (productImage!=null && !productImage.isEmpty()) {
+			try {
+				productImage.transferTo(new File(rootDirectory+"resources\\images\\" + newProduct.getProductId() + ".png"));
+			} catch (Exception e) {
+				throw new RuntimeException("Niepowodzenie podczas próby zapisu obrazka produktu", e);
+			}
 		}
 		productService.addProduct(newProduct);
 		return "redirect:/products";

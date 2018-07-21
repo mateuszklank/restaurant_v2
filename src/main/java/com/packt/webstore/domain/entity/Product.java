@@ -1,5 +1,7 @@
 package com.packt.webstore.domain.entity;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
@@ -16,11 +18,13 @@ public class Product {
 	private String description;
 	//private String manufacturer;
 	private String category;
-//	private long unitsInStock;
-//	private long unitsInOrder;
+	//private long unitsInStock;
+	//private long unitsInOrder;
 	//private boolean discontinued;
 	private boolean vege;
 	//private String condition;
+	@Transient
+	private MultipartFile productImage;
 	
 	public Product() {
 		super();
@@ -112,6 +116,15 @@ public class Product {
 		this.condition = condition;
 	}
 */
+
+	public MultipartFile getProductImage() {
+		return productImage;
+	}
+
+	public void setProductImage(MultipartFile productImage) {
+		this.productImage = productImage;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
