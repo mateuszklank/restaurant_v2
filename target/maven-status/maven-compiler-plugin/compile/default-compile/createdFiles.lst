@@ -12,6 +12,7 @@ com\packt\webstore\controller\OrderController.class
 com\packt\webstore\controller\HomeController.class
 com\packt\webstore\controller\CustomerController.class
 com\packt\webstore\domain\entity\Customer.class
+com\packt\webstore\exception\NoProductsFoundUnderCategoryException.class
 com\packt\webstore\service\CustomerService.class
 com\packt\webstore\domain\entity\Product.class
 com\packt\webstore\controller\LoginController.class
@@ -20,4 +21,5 @@ com\packt\webstore\controller\ProductController.class
 com\packt\webstore\service\impl\OrderServiceImpl.class
 com\packt\webstore\domain\repository\UserRepository.class
 com\packt\webstore\domain\dao\CustomerDao.class
+com\packt\webstore\exception\ProductNotFoundException.class
 com\packt\webstore\service\ProductService.class

@@ -1,6 +1,9 @@
 package com.packt.webstore.controller;
 
+import com.packt.webstore.exception.NoProductsFoundUnderCategoryException;
+import com.packt.webstore.exception.ProductNotFoundException;
 import com.sun.org.apache.xpath.internal.operations.Mult;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -15,6 +18,7 @@ import java.util.Map;
 import com.packt.webstore.domain.entity.Product;
 import com.packt.webstore.service.ProductService;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -42,13 +46,26 @@ public class ProductController {
 		model.addAttribute("products", productService.getAllProducts());
 		return "products";
 	}
-	
+
+	/*
 	@RequestMapping("/{category}")
 	public String getProductsByCategory(Model model, @PathVariable("category") String productCategory) {
 		model.addAttribute("products", productService.getProductsByCategory(productCategory));
 		return "products";
 	}
-	
+	[Poprzednia implementacja metody]
+	*/
+
+	@RequestMapping("/{category}")
+	public String getProductsByCategory(Model model, @PathVariable("category") String productCategory) {
+		List<Product> products = productService.getProductsByCategory(productCategory);
+		if (products == null || products.isEmpty()) {
+			throw new NoProductsFoundUnderCategoryException();
+		}
+		model.addAttribute("products", products);
+		return "products";
+	}
+
 	@RequestMapping("/filter/{ByCriteria}")
 	public String getProductsByFilter(@MatrixVariable(pathVar="ByCriteria") Map<String, List<String>> filterParams, Model model) {
 		model.addAttribute("products", productService.getProductsByFilter(filterParams));
@@ -91,5 +108,15 @@ public class ProductController {
 	public void initialiseBinder(WebDataBinder binder) {
 		binder.setDisallowedFields("unitsInOrder", "discontinued");
 	}
-	
+
+	@ExceptionHandler(ProductNotFoundException.class)
+	public ModelAndView handleError(HttpServletRequest req, ProductNotFoundException exception) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("invalidProductId", exception.getProductId());
+		mav.addObject("exception", exception);
+		mav.addObject("url", req.getRequestURL()+"?"+req.getQueryString());
+		mav.setViewName("productNotFound");
+		return mav;
+	}
+
 }

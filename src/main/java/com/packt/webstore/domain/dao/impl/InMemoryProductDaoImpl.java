@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 import com.packt.webstore.domain.dao.ProductDao;
+import com.packt.webstore.exception.ProductNotFoundException;
 import org.springframework.stereotype.Repository;
 import com.packt.webstore.domain.entity.Product;
 import org.springframework.stereotype.Service;
@@ -87,7 +88,8 @@ public class InMemoryProductDaoImpl implements ProductDao {
 	public List<Product> getAllProducts() {
 		return listOfProducts;
 	}
-	
+
+	/*
 	public Product getProductById(String productId) {
 		Product productById = null;
 		for(Product product : listOfProducts) {
@@ -101,7 +103,22 @@ public class InMemoryProductDaoImpl implements ProductDao {
 		}
 		return productById;
 	}
-	
+	*/
+
+	public Product getProductById(String productId) {
+		Product productById = null;
+		for(Product product : listOfProducts) {
+			if(product!=null && product.getProductId()!=null && product.getProductId().equals(productId)) {
+				productById = product;
+				break;
+			}
+		}
+		if(productById == null) {
+			throw new ProductNotFoundException(productId);
+		}
+		return productById;
+	}
+
 	public List<Product> getProductsByCategory(String category) {
 		List<Product> productsByCategory = new ArrayList<Product>();
 		for(Product product: listOfProducts) {

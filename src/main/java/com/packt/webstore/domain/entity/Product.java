@@ -117,7 +117,7 @@ public class Product {
 	}
 */
 
-	public MultipartFile getProductImage() {
+    public MultipartFile getProductImage() {
 		return productImage;
 	}
 
