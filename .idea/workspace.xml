@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fa717492-e831-481d-a437-03d4f21dc3c5" name="Default" comment="Wyjątki i internacjonalizacja">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/MailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/OrderDbController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/PanelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/ShoppingCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/CartDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/NewProductDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/CartEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/CustomerEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/MailObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/OrderEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/ProductEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/interceptor/AuditingInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/interceptor/PromoCodeInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/EmailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/validator/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/validator/CategoryValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/validator/ProductId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/validator/ProductIdValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/validation.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accessDenied.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart/indexDetails.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contact.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editProduct.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emails.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employees.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/invalidPromoCode.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mail/send.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panel.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelAdmin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelCook.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelProducts.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelProductsEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelWaiter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productsPromo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/javascript/controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/javascript/manualSlideshow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/javascript/parallax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/javascript/sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/styles/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webstore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/CustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/InMemoryCustomerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/InMemoryCustomerRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/InMemoryProductDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/InMemoryProductDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/UserDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/security-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/security-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productNotFound.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productNotFound.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/packt/webstore/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/packt/webstore/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/packt/webstore/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/packt/webstore/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/packt/webstore/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/packt/webstore/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/packt/webstore/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/packt/webstore/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/impl/CustomerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/impl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/packt/webstore/service/impl/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="restaurant@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CustomerEntity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/CustomerEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Enum" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Mateusz Klank &lt;quarionek@gmail.com&gt;" />
+        <option value="mateuszklank" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="springBoot_dg" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/MailObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/EmailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emails.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/MainApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/MailController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mail/send.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/PanelController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accessDenied.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/security-context.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panel.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart/indexOrder.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/CartDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelWaiter.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelCook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelAdmin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/CustomerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/InMemoryCustomerRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/validator/ProductIdValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/OrderDbController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/ProductEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelProducts.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/NewProductDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelProductsEdit.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart/indexDetails.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/CustomerEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/CartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/CartDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/CartDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/OrderEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/CartEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/OrderDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/ShoppingCartController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/CustomerDao.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="webstore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="webstore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1750" />
+    <option name="height" value="1030" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webstore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webstore" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webstore" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webstore" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webstore" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webstore" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webstore" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="entity2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webstore" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webstore" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webstore" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="3140d0fc-4020-4c7c-b537-d95d8c1b3556" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Quari\Desktop\project\restaurant\src\main\resources\static\css\css" />
+      <recent name="C:\Users\Quari\Desktop\project\restaurant\src\main\webapp\resources" />
+      <recent name="C:\Users\Quari\Desktop\project\restaurant\src\main\resources" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.packt.webstore.domain.entity" />
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Quari\Desktop\project\restaurant\src\main\java\com\packt\webstore\domain\entity" />
+      <recent name="C:\Users\Quari\Desktop\project\restaurant\src\main\resources\templates" />
+      <recent name="C:\Users\Quari\Desktop\project\restaurant\src\main\webapp\resources" />
+      <recent name="C:\Users\Quari\Desktop\project\restaurant\src\main\webapp\resources\images" />
+      <recent name="C:\Users\Quari\Desktop\project\restaurant" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MainApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="webstore" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.packt.webstore.MainApp" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa717492-e831-481d-a437-03d4f21dc3c5" name="Default" comment="" />
+      <created>1530712229672</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1530712229672</updated>
+      <workItem from="1530712235167" duration="1128000" />
+      <workItem from="1530713411556" duration="53000" />
+      <workItem from="1531151424248" duration="5830000" />
+      <workItem from="1531215311683" duration="4717000" />
+      <workItem from="1531225713539" duration="526000" />
+      <workItem from="1531226277287" duration="1040000" />
+      <workItem from="1531483205524" duration="42000" />
+      <workItem from="1531483338148" duration="4974000" />
+      <workItem from="1531737597396" duration="1511000" />
+      <workItem from="1531769029198" duration="605000" />
+      <workItem from="1532016506703" duration="6579000" />
+      <workItem from="1532171097738" duration="7856000" />
+      <workItem from="1532431694953" duration="328000" />
+      <workItem from="1532983243071" duration="609000" />
+      <workItem from="1533734558492" duration="5000" />
+      <workItem from="1533735099627" duration="9000" />
+      <workItem from="1533895939047" duration="9264000" />
+      <workItem from="1533912103773" duration="5941000" />
+      <workItem from="1533920455344" duration="999000" />
+      <workItem from="1533921716797" duration="28000" />
+      <workItem from="1534068861686" duration="8652000" />
+      <workItem from="1534086233081" duration="6231000" />
+      <workItem from="1534236225790" duration="12052000" />
+      <workItem from="1534254380829" duration="5065000" />
+      <workItem from="1534494009714" duration="16798000" />
+      <workItem from="1534520887087" duration="8522000" />
+      <workItem from="1534669653630" duration="9050000" />
+      <workItem from="1534692815913" duration="9202000" />
+      <workItem from="1535192698284" duration="14378000" />
+      <workItem from="1535375848775" duration="9719000" />
+      <workItem from="1535529708007" duration="5867000" />
+      <workItem from="1535552018541" duration="8311000" />
+      <workItem from="1535704076870" duration="11558000" />
+      <workItem from="1535727988095" duration="4509000" />
+      <workItem from="1535888355174" duration="6402000" />
+      <workItem from="1535907556811" duration="2929000" />
+      <workItem from="1537715314713" duration="1552000" />
+      <workItem from="1537866986748" duration="9005000" />
+      <workItem from="1538045847959" duration="6091000" />
+      <workItem from="1538066782892" duration="5441000" />
+      <workItem from="1538391798325" duration="3718000" />
+      <workItem from="1538563443702" duration="10846000" />
+      <workItem from="1539259718089" duration="8339000" />
+      <workItem from="1539604235514" duration="6228000" />
+      <workItem from="1539775314588" duration="5578000" />
+      <workItem from="1540548085611" duration="12000" />
+      <workItem from="1540548823602" duration="6795000" />
+      <workItem from="1540646020614" duration="5754000" />
+      <workItem from="1540816182597" duration="3389000" />
+      <workItem from="1541590950847" duration="5283000" />
+      <workItem from="1541612247794" duration="3704000" />
+      <workItem from="1541762964773" duration="9753000" />
+      <workItem from="1542018166527" duration="5203000" />
+      <workItem from="1542042206598" duration="4798000" />
+      <workItem from="1542190328014" duration="1358000" />
+      <workItem from="1542198389516" duration="12367000" />
+      <workItem from="1542710368592" duration="1586000" />
+      <workItem from="1542797089548" duration="715000" />
+      <workItem from="1542888299973" duration="734000" />
+      <workItem from="1543252408087" duration="12000" />
+      <workItem from="1543252618069" duration="2645000" />
+      <workItem from="1544032737129" duration="1967000" />
+      <workItem from="1544097368029" duration="2789000" />
+      <workItem from="1544438100875" duration="1231000" />
+      <workItem from="1544454162505" duration="1795000" />
+      <workItem from="1544617206471" duration="1289000" />
+      <workItem from="1545216547238" duration="2719000" />
+      <workItem from="1545253965255" duration="3790000" />
+      <workItem from="1545260200140" duration="151000" />
+      <workItem from="1545307718477" duration="1926000" />
+      <workItem from="1545342718090" duration="774000" />
+      <workItem from="1546611911700" duration="4000" />
+      <workItem from="1546622819859" duration="2807000" />
+      <workItem from="1546710603459" duration="2301000" />
+      <workItem from="1546867342544" duration="4877000" />
+      <workItem from="1546955053819" duration="4533000" />
+      <workItem from="1547034804690" duration="1228000" />
+      <workItem from="1547122275580" duration="4292000" />
+      <workItem from="1547136091355" duration="1423000" />
+      <workItem from="1547557576008" duration="6243000" />
+      <workItem from="1547634772111" duration="6323000" />
+      <workItem from="1547717194186" duration="6716000" />
+      <workItem from="1547734202021" duration="3414000" />
+      <workItem from="1547806429949" duration="12876000" />
+      <workItem from="1547894556184" duration="3573000" />
+      <workItem from="1548072768906" duration="813000" />
+      <workItem from="1548076419776" duration="615000" />
+      <workItem from="1548078642081" duration="1838000" />
+      <workItem from="1548264374958" duration="162000" />
+      <workItem from="1548338981681" duration="4975000" />
+      <workItem from="1548762781754" duration="8385000" />
+      <workItem from="1548845312444" duration="16130000" />
+      <workItem from="1548945575684" duration="6588000" />
+      <workItem from="1548958851530" duration="40000" />
+      <workItem from="1549019239242" duration="10398000" />
+      <workItem from="1549030188135" duration="993000" />
+      <workItem from="1549195050015" duration="13004000" />
+      <workItem from="1549218650857" duration="167000" />
+      <workItem from="1549278802021" duration="7198000" />
+      <workItem from="1549297747716" duration="6771000" />
+      <workItem from="1549368919263" duration="6637000" />
+      <workItem from="1549376186196" duration="64000" />
+    </task>
+    <task id="LOCAL-00001" summary="Dodawanie i wyświetlanie obrazków produktów">
+      <created>1532176206868</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1532176206868</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Wyjątki i internacjonalizacja">
+      <created>1533919200262</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1533919200262</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="476014000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.10671141" side_tool="true" visible="true" weight="0.37413073" />
+      <window_info anchor="right" id="Maven Projects" order="10" weight="0.16174497" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.11543624" />
+      <window_info anchor="right" id="Structure" order="8" sideWeight="0.41295546" side_tool="true" weight="0.19731544" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.3991655" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" sideWeight="0.49932885" weight="0.32962447" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4986577" weight="0.32962447" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8932886" weight="0.37413073" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49798658" weight="0.32962447" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49798658" weight="0.32962447" />
+      <window_info id="Persistence" order="0" sideWeight="0.15111111" side_tool="true" visible="true" weight="0.21879195" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.8488889" visible="true" weight="0.21879195" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3295302" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.37552157" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.47114095" weight="0.37552157" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" sideWeight="0.5590604" weight="0.15438108" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Dodawanie i wyświetlanie obrazków produktów" />
+    <MESSAGE value="Wyjątki i internacjonalizacja" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wyjątki i internacjonalizacja" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="7" />
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="127" column="30" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/InMemoryProductDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="76" column="73" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/InMemoryCustomerRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="68" lean-forward="true" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3140d0fc-4020-4c7c-b537-d95d8c1b3556/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.0.RELEASE/spring-boot-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" selection-start-line="24" selection-end-line="24" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/CartItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.0.5.RELEASE/spring-data-jpa-2.0.5.RELEASE.jar!/org/springframework/data/jpa/repository/support/JpaRepositoryFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.0.RELEASE/spring-boot-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="844">
+          <caret line="78" column="73" selection-start-line="78" selection-start-column="73" selection-end-line="78" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/MailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/MailObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.5.RELEASE/spring-data-commons-2.0.5.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/validator/ProductIdValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/UserDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="5" selection-start-line="29" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/User.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/repository/UserRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/UserDaoImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/OrderDbController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="60" column="7" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="60" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelProducts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="65" column="88" selection-start-line="65" selection-start-column="88" selection-end-line="65" selection-end-column="88" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/interceptor/PerformanceMonitorInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/PanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/panelProductsEdit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="70" column="26" lean-forward="true" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/ProductDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="107" column="47" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart/indexDetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="177" column="50" selection-start-line="177" selection-start-column="50" selection-end-line="177" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="106" column="30" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/ProductEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/impl/CartDaoImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/service/impl/CartServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/CartRestController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/NewProductDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/OrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity2/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/controller/ShoppingCartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="91" column="48" lean-forward="true" selection-start-line="91" selection-start-column="48" selection-end-line="91" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/CartDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/CartEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/OrderEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/dao/CustomerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packt/webstore/domain/entity/CustomerEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>webstore:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>@types/angular</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JPA|webstore</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

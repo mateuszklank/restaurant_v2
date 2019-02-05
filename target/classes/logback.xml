@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="30 seconds">
+
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>TRACE</level>
+
+        </filter>
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread] %logger{10}.%M %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="com.packt.webstore" level="TRACE"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

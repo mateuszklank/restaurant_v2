@@ -1,0 +1,150 @@
+.divider {
+    height:50px;
+}
+
+section {
+    height:250px;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:auto;
+}
+
+.bg-1 {
+    background: url('../images/background1.png') no-repeat center center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-2 {
+    background: url('../images/background2.png') no-repeat top center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-3 {
+    background: url('../images/background2.png') no-repeat bottom center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+#footer {
+    height: 60px;
+    background-color:black;
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer a {
+    color:#efefef;
+}
+
+h1 {
+    font-family: "Lucida Console";
+    color: white;
+    text-shadow: 1.5px 1.5px 2px black, 0 0 7px black, 0 0 7px black;
+}
+
+h3 {
+    font-family: "Lucida Console";
+}
+/*
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #003300;
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    background-color: #001a00;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-success,
+.btn-success:active,
+.btn-success:visited,
+.btn-success:focus {
+    background-color: white;
+    border-color: lightgrey;
+    color: black;
+}
+
+.btn-success:hover {
+    background-color: #ccffcc;
+    border-color: lightgrey;
+    color: black;
+}
+*/
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+a {
+    text-decoration-line: none;
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Karma", sans-serif;
+}
+.w3-bar-block {
+    padding:20px;
+}
+
+.w3-bar-item {
+    padding:20px;
+}

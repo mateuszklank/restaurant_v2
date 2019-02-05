@@ -9,8 +9,7 @@ import java.util.Set;
 
 import com.packt.webstore.domain.dao.ProductDao;
 import com.packt.webstore.exception.ProductNotFoundException;
-import org.springframework.stereotype.Repository;
-import com.packt.webstore.domain.entity.Product;
+import com.packt.webstore.domain.entity2.Product;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,11 +18,24 @@ public class InMemoryProductDaoImpl implements ProductDao {
 	private List<Product> listOfProducts = new ArrayList<Product>();
 	
 	public InMemoryProductDaoImpl() {
-		
+
+		/*
+		http://localhost:8888/products/create?productId=P1234&name=Lasagne z warzywami&unitPrice=35&description=Z cukinią, batatem, sosem pomidorowym, kaszą jaglaną i serem wegańskim&category=Obiad&vege=1
+		http://localhost:8888/products/create?productId=P1235&name=Spaghetti z pomidorami&unitPrice=25&description=Makaron z sosem pomidorowym, papryką, cukinią i pomidorami&category=Obiad&vege=1
+		http://localhost:8888/products/create?productId=P1236&name=Farfalle w sosie śmietanowo-brokułowym&unitPrice=29&description=Makaron kokardki z brokułami i śmietaną&category=Obiad&vege=1
+		http://localhost:8888/products/create?productId=P1237&name=Falafel z sałatką&unitPrice=32&description=Kotlecik z cieciorki z przyprawami z surówką z majonezem wegańskim własnej roboty&category=Obiad&vege=1
+		http://localhost:8888/products/create?productId=P1238&name=Gofr z jajkiem&unitPrice=15&description=Gofr wytrawny z jajkiem sadzonym, szczypiorem i sosem majonezowym&category=Sniadanie&vege=1
+		http://localhost:8888/products/create?productId=P1239&name=Jajecznica&unitPrice=12&description=3 jajka z szynką, kiełkami, szczypiorkiem i masłem&category=Sniadanie&vege=1
+		http://localhost:8888/products/create?productId=P1240&name=Hummus na ostro&unitPrice=19&description=Z ciecierzycą, ostrą papryką, pesto, sałatą i warzywami&category=Sniadanie&vege=1
+		http://localhost:8888/products/create?productId=P1241&name=Bananowe szaleństwo&unitPrice=10&description=Z bananem z galaretką bez cukru, jogurtem naturalnym i konfiturą&category=Deser&vege=1
+		http://localhost:8888/products/create?productId=P1242&name=Granola (bezglutenowa)&unitPrice=10&description=Sałatka owocowa z miętą, jogurtem naturalnym i granolą&category=Deser&vege=1
+		http://localhost:8888/products/create?productId=P1243&name=Rajskie Bounty&unitPrice=10&description=Nasza wege czekolada z kaszą jaglaną, kokosem i rodzynkami&category=Deser&vege=1
+		 */
+
 		Product lasagne = new Product("P1234", "Lasagne z warzywami", new BigDecimal(30));
 		lasagne.setDescription("Z cukinią, batatem, sosem pomidorowym, kaszą jaglaną i serem wegańskim");
 		lasagne.setCategory("Obiad");
-//		lasagne.setUnitsInStock(100);
+		//lasagne.setUnitsInStock(100);
 		
 		Product spaghetti = new Product("P1235", "Spaghetti z pomidorami", new BigDecimal(25));
 		spaghetti.setDescription("Makaron z sosem pomidorowym, papryką, cukinią i pomidorami");
@@ -65,11 +77,11 @@ public class InMemoryProductDaoImpl implements ProductDao {
 		granola.setCategory("Deser");
 //		granola.setUnitsInStock(100);
 		
-		Product rajskie = new Product("P1242", "Rajskie Bounty", new BigDecimal(10));
+		Product rajskie = new Product("P1243", "Rajskie Bounty", new BigDecimal(10));
 		rajskie.setDescription("Nasza wege czekolada z kaszą jaglaną, kokosem i rodzynkami");
 		rajskie.setCategory("Deser");
 //		rajskie.setUnitsInStock(100);
-		
+
 		listOfProducts.add(lasagne);
 		listOfProducts.add(spaghetti);
 		listOfProducts.add(farfale);
@@ -80,7 +92,7 @@ public class InMemoryProductDaoImpl implements ProductDao {
 		listOfProducts.add(granola);
 		listOfProducts.add(hummus);
 		listOfProducts.add(banan);
-		
+
 	}
 
 
@@ -155,5 +167,20 @@ public class InMemoryProductDaoImpl implements ProductDao {
 	public void addProduct(Product product) {
 		listOfProducts.add(product);
 	}
-	
+
+	//poniżej dodane do obsługi koszyka
+
+	public List<Product> findAll() {
+		return this.listOfProducts;
+	}
+
+	public Product find(String id) {
+		for (Product product : this.listOfProducts) {
+			if (product.getProductId().equalsIgnoreCase(id)) {
+				return product;
+			}
+		}
+		return null;
+	}
+
 }

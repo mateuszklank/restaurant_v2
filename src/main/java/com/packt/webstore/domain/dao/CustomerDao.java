@@ -1,16 +1,21 @@
 package com.packt.webstore.domain.dao;
 
-import com.packt.webstore.domain.entity.Customer;
+import com.packt.webstore.domain.entity.CustomerEntity;
+import com.packt.webstore.domain.entity2.Customer;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Transactional
+public interface CustomerDao extends CrudRepository<CustomerEntity, Long> {
 
-public interface CustomerDao {
-	
-	List<Customer> getAllCustomers();
-	
-	Customer getCustomerById(String customerId);
-	
+	List<CustomerEntity> findAll();
+
+	public CustomerEntity findByName(String name);
+
+	public CustomerEntity findById(Integer id);
+
+	public CustomerEntity findById(String customerId);
+
 }

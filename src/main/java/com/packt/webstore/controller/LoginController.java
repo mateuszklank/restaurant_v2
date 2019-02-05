@@ -1,9 +1,15 @@
 package com.packt.webstore.controller;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class LoginController {
@@ -19,8 +25,22 @@ public class LoginController {
         return "login";
     }
 
-    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+/*
+    //old logout method
+    //@RequestMapping(value = "/logout", method = RequestMethod.GET)
+    @RequestMapping(value = "/j_spring_security_logout", method = RequestMethod.GET)
     public String logout(Model model) {
+        return "login";
+    }
+*/
+
+    //logout method
+    @RequestMapping(value="/j_spring_security_logout", method = RequestMethod.GET)
+    public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth != null){
+            new SecurityContextLogoutHandler().logout(request, response, auth);
+        }
         return "login";
     }
 

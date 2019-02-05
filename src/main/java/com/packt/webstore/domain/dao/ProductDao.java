@@ -1,15 +1,15 @@
 package com.packt.webstore.domain.dao;
 
-import com.packt.webstore.domain.entity.Customer;
-import com.packt.webstore.domain.entity.Product;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import com.packt.webstore.domain.entity2.Product;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public interface ProductDao{
+@Transactional
+public interface ProductDao {
+//public interface ProductDao extends CrudRepository<Product, String> {
 	
 	List<Product> getAllProducts();
 	
